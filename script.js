@@ -1,22 +1,107 @@
-// Welcome Message
 // ==========================
-// Smooth Scrolling
+// ALI RAZA PORTFOLIO V2.0
+// Part 1
 // ==========================
 
-document.querySelectorAll('nav a').forEach(anchor => {
+// AOS Animation
+AOS.init({
+    duration: 1000,
+    once: true
+});
 
-    anchor.addEventListener('click', function(e){
+// Typing Effect
 
-        e.preventDefault();
+const text = [
+    "Artificial Intelligence Student",
+    "Website Developer",
+    "Meta Ads Expert",
+    "AI Enthusiast"
+];
 
-        const target = document.querySelector(this.getAttribute('href'));
+let count = 0;
+let index = 0;
+let currentText = "";
+let letter = "";
 
-        if(target){
+(function type() {
 
-            target.scrollIntoView({
-                behavior:'smooth'
-            });
+    if (count === text.length) {
+        count = 0;
+    }
 
+    currentText = text[count];
+    letter = currentText.slice(0, ++index);
+
+    document.getElementById("typing").textContent = letter;
+
+    if (letter.length === currentText.length) {
+
+        setTimeout(() => {
+
+            index = 0;
+            count++;
+
+            setTimeout(type, 300);
+
+        }, 1800);
+
+    } else {
+
+        setTimeout(type, 100);
+
+    }
+
+})();
+
+// ==========================
+// Mobile Menu Toggle
+// ==========================
+
+const menuBtn = document.querySelector(".menu-btn");
+const navLinks = document.querySelector(".nav-links");
+
+menuBtn.addEventListener("click", () => {
+    navLinks.classList.toggle("active");
+});
+
+// ==========================
+// Close Menu After Click
+// ==========================
+
+document.querySelectorAll(".nav-links a").forEach(link => {
+    link.addEventListener("click", () => {
+        navLinks.classList.remove("active");
+    });
+});
+
+// ==========================
+// Active Navbar Link
+// ==========================
+
+const sections = document.querySelectorAll("section");
+const navItems = document.querySelectorAll(".nav-links a");
+
+window.addEventListener("scroll", () => {
+
+    let current = "";
+
+    sections.forEach(section => {
+
+        const sectionTop = section.offsetTop - 120;
+        const sectionHeight = section.clientHeight;
+
+        if (pageYOffset >= sectionTop) {
+            current = section.getAttribute("id");
+        }
+
+    });
+
+    navItems.forEach(link => {
+
+        link.classList.remove("active");
+
+        if (link.getAttribute("href") === "#" + current) {
+            link.classList.add("active");
         }
 
     });
@@ -24,251 +109,23 @@ document.querySelectorAll('nav a').forEach(anchor => {
 });
 
 // ==========================
-// Header Shadow on Scroll
+// Navbar Shadow on Scroll
 // ==========================
 
-window.addEventListener('scroll',()=>{
+window.addEventListener("scroll", () => {
 
-    const header=document.querySelector('header');
+    const header = document.querySelector("header");
 
-    if(window.scrollY>50){
-
-        header.style.boxShadow="0 5px 20px rgba(0,0,0,.25)";
-
-    }else{
-
-        header.style.boxShadow="none";
-
+    if (window.scrollY > 50) {
+        header.style.boxShadow = "0 10px 25px rgba(0,0,0,.25)";
+    } else {
+        header.style.boxShadow = "none";
     }
 
 });
 
 // ==========================
-// Fade Animation
+// Console Message
 // ==========================
 
-const sections=document.querySelectorAll("section");
-
-const observer=new IntersectionObserver((entries)=>{
-
-    entries.forEach(entry=>{
-
-        if(entry.isIntersecting){
-
-            entry.target.style.opacity="1";
-            entry.target.style.transform="translateY(0)";
-
-        }
-
-    });
-
-},{threshold:0.2});
-
-sections.forEach(section=>{
-
-    section.style.opacity="0";
-    section.style.transform="translateY(50px)";
-    section.style.transition="all .8s ease";
-
-    observer.observe(section);
-
-});
-
-  // ==========================
-// Hero Image Animation
-// ==========================
-
-const heroImage = document.querySelector(".hero-image img");
-
-if(heroImage){
-
-setInterval(()=>{
-
-heroImage.animate([
-
-{transform:"translateY(0px)"},
-
-{transform:"translateY(-12px)"},
-
-{transform:"translateY(0px)"}
-
-],{
-
-duration:2500,
-
-iterations:1
-
-});
-
-},2500);
-
-}
-
-// ==========================
-// Active Navigation Link
-// ==========================
-
-const navLinks=document.querySelectorAll("nav a");
-
-window.addEventListener("scroll",()=>{
-
-let current="";
-
-document.querySelectorAll("section").forEach(section=>{
-
-const sectionTop=section.offsetTop-150;
-
-if(pageYOffset>=sectionTop){
-
-current=section.getAttribute("id");
-
-}
-
-});
-
-navLinks.forEach(link=>{
-
-link.classList.remove("active");
-
-if(link.getAttribute("href")==="#"+current){
-
-link.classList.add("active");
-
-}
-
-});
-
-});
-
-// ==========================
-// Welcome Message
-// ==========================
-
-window.addEventListener("load",()=>{
-
-console.log("Welcome to Ali Raza Portfolio Website");
-
-});
-
-// ==========================
-// Gallery Hover Effect
-// ==========================
-
-const images=document.querySelectorAll(".gallery img");
-
-images.forEach(image=>{
-
-image.addEventListener("mouseover",()=>{
-
-image.style.transform="scale(1.08)";
-
-});
-
-image.addEventListener("mouseout",()=>{
-
-image.style.transform="scale(1)";
-
-});
-
-});
-
-// ==========================
-// Footer Year
-// ==========================
-
-const footer=document.querySelector("footer p:last-child");
-
-if(footer){
-
-footer.innerHTML="© "+new Date().getFullYear()+" Ali Raza | All Rights Reserved";
-
-}
-
-  // AOS Animation
-AOS.init({
-    duration:1000,
-    once:true
-});
-
-// Typing Animation
-new Typed("#typing",{
-    strings:[
-        "Artificial Intelligence Student",
-        "Website Developer",
-        "Meta Ads Expert",
-        "Freelancer"
-    ],
-    typeSpeed:70,
-    backSpeed:40,
-    backDelay:1500,
-    loop:true
-});
-
-   // Dark Mode
-
-const darkBtn=document.getElementById("darkModeBtn");
-
-darkBtn.onclick=function(){
-
-document.body.classList.toggle("dark");
-
-if(document.body.classList.contains("dark")){
-
-darkBtn.innerHTML="☀️";
-
-}else{
-
-darkBtn.innerHTML="🌙";
-
-}
-
-};
-
-  // Mobile Menu
-
-const menuBtn=document.querySelector(".menu-btn");
-const nav=document.querySelector("nav");
-
-menuBtn.addEventListener("click",()=>{
-
-nav.classList.toggle("active");
-
-});
-
-  window.addEventListener("load",()=>{
-
-setTimeout(()=>{
-
-document.getElementById("loader").style.display="none";
-
-},1200);
-
-});
-
-  const topBtn=document.getElementById("topBtn");
-
-window.onscroll=function(){
-
-if(document.documentElement.scrollTop>300){
-
-topBtn.style.display="block";
-
-}else{
-
-topBtn.style.display="none";
-
-}
-
-};
-
-topBtn.onclick=function(){
-
-window.scrollTo({
-
-top:0,
-
-behavior:"smooth"
-
-});
-
-};
+console.log("Ali Raza Portfolio V2.0 Loaded Successfully 🚀");

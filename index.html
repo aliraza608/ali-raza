@@ -2,10 +2,11 @@
 <html lang="en">
 
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Ali Raza | Personal Portfolio</title>
+<title>Ali Raza | AI Portfolio</title>
 
 <link rel="stylesheet" href="style.css">
 
@@ -13,48 +14,27 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
-<link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
 </head>
-  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-
-<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-
-
-  <button id="topBtn">
-⬆
-</button>
 
 <body>
 
-    <div id="loader">
-
-<h1>Ali Raza</h1>
-
-</div>
-
-<!-- Navigation -->
+<!-- Navbar -->
 
 <header>
+
+<nav class="navbar">
 
 <div class="logo">
 Ali Raza
 </div>
-  
-<button id="darkModeBtn">
-    🌙
-</button>
 
-<nav>
-  
-
-     <div class="menu-btn">
-    <i class="fas fa-bars"></i>
-</div>
-
-
-<ul>
+<ul class="nav-links">
 
 <li><a href="#home">Home</a></li>
 
@@ -64,11 +44,19 @@ Ali Raza
 
 <li><a href="#skills">Skills</a></li>
 
-<li><a href="#gallery">Gallery</a></li>
+<li><a href="#projects">Projects</a></li>
+
+<li><a href="#certificates">Certificates</a></li>
 
 <li><a href="#contact">Contact</a></li>
 
 </ul>
+
+<div class="menu-btn">
+
+<i class="fas fa-bars"></i>
+
+</div>
 
 </nav>
 
@@ -76,65 +64,65 @@ Ali Raza
 
 <!-- Hero Section -->
 
-<!-- Hero Section -->
-
 <section class="hero" id="home">
 
 <div class="hero-content" data-aos="fade-right">
 
-<h1>Ali Raza</h1>
+<h1>Hi, I'm <span>Ali Raza</span></h1>
 
-<h3>
-<span id="typing"></span>
-</h3>
+<h2 id="typing"></h2>
 
 <p>
-Artificial Intelligence Student | Website Developer | Meta Ads Expert
+
+Artificial Intelligence Student passionate about AI, Website Development, Meta Ads, and Digital Solutions.
+
 </p>
 
-<a href="#contact" class="btn">Hire Me</a>
+<div class="hero-buttons">
+
+<a href="#contact" class="btn">
+Hire Me
+</a>
 
 <a href="Ali_Raza_CV.pdf" class="btn2" download>
-    Download CV
+Download CV
 </a>
+
+</div>
 
 </div>
 
 <div class="hero-image" data-aos="fade-left">
 
-<img src="photo1.jpeg" alt="Ali Raza">
+<img src="images/photo1.jpeg" alt="Ali Raza">
 
 </div>
 
 </section>
 
-<!-- About -->
+  <!-- About Section -->
 
-<section id="about">
+<section id="about" class="section">
 
-<h2 class="section-title">
+<div class="container">
 
-About Me
+<h2 class="section-title" data-aos="fade-up">About Me</h2>
 
-</h2>
-
-<div class="about-box">
+<div class="about-box" data-aos="zoom-in">
 
 <p>
 
-My name is <strong>Ali Raza</strong>.
-
-I am studying BS Artificial Intelligence at the University of Sindh Jamshoro.
-
-I love Artificial Intelligence,
-Website Development,
-Meta Ads,
-Digital Marketing,
-and learning new technologies.
-
-My goal is to become a successful AI Engineer and Entrepreneur.
+Hi! I'm <strong>Ali Raza</strong>, an Artificial Intelligence student at the University of Sindh. I enjoy building modern websites, learning AI tools, and creating digital solutions that solve real-world problems.
 
 </p>
+
+<p>
+
+My goal is to become a professional AI Engineer, Full Stack Web Developer, and Digital Marketing Expert while helping businesses grow online.
+
+</p>
+
+</div>
 
 </div>
 
@@ -142,34 +130,23 @@ My goal is to become a successful AI Engineer and Entrepreneur.
 
 <!-- Education -->
 
-<section id="education">
+<section id="education" class="section">
 
-<h2 class="section-title">
+<div class="container">
 
-Education
+<h2 class="section-title" data-aos="fade-up">Education</h2>
 
-</h2>
+<div class="edu-card" data-aos="fade-right">
 
-<div class="edu-card">
+<h3>University of Sindh Jamshoro</h3>
 
-<h3>
+<p><strong>Degree:</strong> BS Artificial Intelligence</p>
 
-University of Sindh Jamshoro
+<p><strong>Status:</strong> Undergraduate Student</p>
 
-</h3>
+<p><strong>Focus:</strong> Artificial Intelligence, Machine Learning, Web Development & Programming</p>
 
-<p>
-
-Bachelor of Science in Artificial Intelligence
-
-</p>
-
-<p>
-
-Current Status :
-Student
-
-</p>
+</div>
 
 </div>
 
@@ -177,94 +154,33 @@ Student
 
 <!-- Skills -->
 
-<section id="skills">
+<section id="skills" class="section">
 
-<h2 class="section-title">Professional Skills</h2>
+<div class="container">
 
-<div class="progress">
+<h2 class="section-title" data-aos="fade-up">My Skills</h2>
 
-<p>HTML</p>
+<div class="skills-grid">
 
-<div class="bar">
-<div style="width:95%"></div>
-</div>
+<div class="skill-card">HTML5</div>
 
-<p>CSS</p>
+<div class="skill-card">CSS3</div>
 
-<div class="bar">
-<div style="width:90%"></div>
-</div>
+<div class="skill-card">JavaScript</div>
 
-<p>JavaScript</p>
+<div class="skill-card">Artificial Intelligence</div>
 
-<div class="bar">
-<div style="width:80%"></div>
-</div>
+<div class="skill-card">Website Development</div>
 
-<p>AI</p>
+<div class="skill-card">Meta Ads</div>
 
-<div class="bar">
-<div style="width:85%"></div>
-</div>
+<div class="skill-card">Git & GitHub</div>
 
-</div>
+<div class="skill-card">VS Code</div>
 
-</section>
-  <!-- Gallery -->
+<div class="skill-card">Prompt Engineering</div>
 
-<!-- Gallery -->
-
-<section id="gallery">
-
-<h2 class="section-title">
-My Gallery
-</h2>
-
-<div class="gallery">
-
-<img src="photo1.jpeg" alt="Ali Raza Photo 1">
-
-<img src="photo2.jpeg" alt="Ali Raza Photo 2">
-
-<img src="photo3.jpeg" alt="Ali Raza Photo 3">
-
-<img src="photo4.jpeg" alt="Ali Raza Photo 4">
-
-<img src="photo5.jpeg" alt="Ali Raza Photo 5">
-
-</div>
-
-</section>
-
-<!-- Projects -->
-
-<section id="projects">
-
-<h2 class="section-title">My Projects</h2>
-
-<div class="project-container">
-
-<div class="project-card">
-
-<h3>Personal Portfolio</h3>
-
-<p>A modern responsive portfolio website built using HTML, CSS and JavaScript.</p>
-
-</div>
-
-<div class="project-card">
-
-<h3>Business Website</h3>
-
-<p>Professional websites for local businesses like restaurants, salons and shops.</p>
-
-</div>
-
-<div class="project-card">
-
-<h3>AI Projects</h3>
-
-<p>Artificial Intelligence learning projects and future portfolio work.</p>
+<div class="skill-card">AI Tools</div>
 
 </div>
 
@@ -272,114 +188,122 @@ My Gallery
 
 </section>
 
-<!-- Services -->
+  <!-- Projects Section -->
 
-<section id="services">
+<section id="projects" class="section">
 
-<h2 class="section-title">My Services</h2>
+<div class="container">
 
-<div class="service-container">
+<h2 class="section-title" data-aos="fade-up">My Projects</h2>
 
-<div class="service-card">
-🌐
-<h3>Website Development</h3>
-<p>Modern responsive websites for businesses.</p>
-</div>
+<div class="project-card" data-aos="zoom-in">
 
-<div class="service-card">
-📢
-<h3>Meta Ads</h3>
-<p>Facebook & Instagram advertising campaigns.</p>
-</div>
+<h3>Personal Portfolio Website</h3>
 
-<div class="service-card">
-🤖
-<h3>AI Solutions</h3>
-<p>AI tools and automation for businesses.</p>
+<p>
+
+A modern responsive portfolio website built using HTML, CSS and JavaScript. It showcases my skills, education, certificates and contact information.
+
+</p>
+
+<a href="#" class="btn">Live Demo</a>
+
 </div>
 
 </div>
 
 </section>
 
-<!-- Contact -->
+<!-- Certificates Section -->
 
-<section id="contact">
+<section id="certificates" class="section">
 
-<h2 class="section-title">
+<div class="container">
 
-Contact Me
+<h2 class="section-title" data-aos="fade-up">Google AI Certificates</h2>
 
-<div class="social-icons">
+<div class="certificate-container">
 
-<a href="https://facebook.com" target="_blank">
-<i class="fab fa-facebook"></i>
-</a>
+<div class="certificate-card">
+<h3>Google AI</h3>
+<a href="certificates/google-ai.pdf" target="_blank" class="btn">View Certificate</a>
+</div>
 
-<a href="https://instagram.com/aliraza_.502" target="_blank">
-<i class="fab fa-instagram"></i>
-</a>
+<div class="certificate-card">
+<h3>AI Fundamentals</h3>
+<a href="certificates/ai-fundamentals.pdf" target="_blank" class="btn">View Certificate</a>
+</div>
 
-<a href="https://wa.me/923073842502" target="_blank">
-<i class="fab fa-whatsapp"></i>
+<div class="certificate-card">
+<h3>AI for Content Creation</h3>
+<a href="certificates/ai-content-creation.pdf" target="_blank" class="btn">View Certificate</a>
+</div>
+
+<div class="certificate-card">
+<h3>AI for Research & Insights</h3>
+<a href="certificates/ai-research-insights.pdf" target="_blank" class="btn">View Certificate</a>
+</div>
+
+<div class="certificate-card">
+<h3>AI for Writing & Communicating</h3>
+<a href="certificates/ai-writing-communicating.pdf" target="_blank" class="btn">View Certificate</a>
+</div>
+
+<div class="certificate-card">
+<h3>AI for Brainstorming & Planning</h3>
+<a href="certificates/ai-brainstorming-planning.pdf" target="_blank" class="btn">View Certificate</a>
+</div>
+
+<div class="certificate-card">
+<h3>AI for Data Analysis</h3>
+<a href="certificates/ai-data-analysis.pdf" target="_blank" class="btn">View Certificate</a>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- Contact Section -->
+
+<section id="contact" class="section">
+
+<div class="container">
+
+<h2 class="section-title" data-aos="fade-up">Contact Me</h2>
+
+<div class="contact-box">
+
+<p><strong>Name:</strong> Ali Raza</p>
+
+<p><strong>Email:</strong> alirazapc71@gmail.com</p>
+
+<p><strong>WhatsApp:</strong> +92 307 3842502</p>
+
+<p><strong>Instagram:</strong> @aliraza_502</p>
+
+<a href="https://wa.me/923073842502" class="btn" target="_blank">
+Message on WhatsApp
 </a>
 
 </div>
 
-  <form class="contact-form">
+</div>
 
-<input type="text" placeholder="Your Name" required>
-
-<input type="email" placeholder="Your Email" required>
-
-<textarea rows="6" placeholder="Your Message"></textarea>
-
-<button type="submit" class="btn">
-Send Message
-</button>
-
-</form>
+</section>
 
 <!-- Footer -->
 
 <footer>
 
-<h2>Ali Raza</h2>
-
-<p>
-
-Artificial Intelligence Student
-
-</p>
-
-<p>
-
-University of Sindh Jamshoro
-
-</p>
-
-<p>
-
-© 2026 Ali Raza | All Rights Reserved
-
-</p>
+<p>© 2026 Ali Raza | All Rights Reserved.</p>
 
 </footer>
 
-<!-- Floating WhatsApp -->
-
-<a href="https://wa.me/923073842505"
-
-class="whatsapp"
-
-target="_blank">
-
-💬
-
-</a>
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
 
 <script src="script.js"></script>
 
 </body>
-
 </html>
